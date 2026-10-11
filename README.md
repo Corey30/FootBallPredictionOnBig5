@@ -1,6 +1,6 @@
 # Football Prediction on Big 5 Leagues
 
-An end-to-end football prediction research project for Europe?s Big Five leagues: England, Spain, Germany, Italy, and France. The project combines structured match-level modelling with event-derived first-half momentum analysis to study football result prediction under chronological evaluation.
+An end-to-end football prediction research project for Europe's Big Five leagues: England, Spain, Germany, Italy, and France. The project combines structured match-level modelling with event-derived features for pre-match and half-time prediction.
 
 > This project is for research and engineering purposes. Its outputs are statistical estimates, not betting advice or guarantees of future results.
 
@@ -18,26 +18,26 @@ The project is organized into two connected components:
    - Builds first-half event-state tables and momentum-curve features.
    - Runs controlled CatBoost and Optuna experiments comparing baseline, half-time, momentum, and combined feature sets.
 
-The first component provides the broader modelling framework. The second component focuses on event-derived momentum features and controlled experiments that can be used to extend or validate the broader framework.
+The first component provides the broader modelling framework. The second component focuses on event-derived momentum features and controlled experiments that can be used to extend or validate the broader approach.
 
 ## Research workflow
 
-```text
+```
 Historical match and event data
-            ?
-            ??? FootBallRealPre
-            ?   ??? StatsBomb match/event ingestion
-            ?   ??? Event-state construction
-            ?   ??? First-half momentum curves
-            ?   ??? Momentum feature tables
-            ?
-            ??? FootBallPredictionOnBig5
-                ??? Data cleaning and feature preparation
-                ??? Pre-match and half-time feature construction
-                ??? Time-aware train/validation/test splits
-                ??? Model training and tuning
-                ??? Evaluation and visual reports
-                ??? Reproducible experiment outputs
+            │
+            ├─ FootBallRealPre
+            │  ├─ StatsBomb match/event ingestion
+            │  ├─ Event-state construction
+            │  ├─ First-half momentum curves
+            │  └─ Momentum feature tables
+            │
+            └─ FootBallPredictionOnBig5
+               ├─ Data cleaning and feature preparation
+               ├─ Pre-match and half-time feature construction
+               ├─ Time-aware train/validation/test splits
+               ├─ Model training and tuning
+               ├─ Evaluation and visual reports
+               └─ Reproducible experiment outputs
 ```
 
 Both components use the three-class match-result target:
@@ -48,39 +48,39 @@ Both components use the three-class match-result target:
 
 ## Repository structure
 
-```text
+```
 .
-??? README.md
-??? FootBallPredictionOnBig5/
-?   ??? README.md
-?   ??? requirements.txt
-?   ??? .gitignore
-?   ??? data/
-?   ??? merged_data/
-?   ??? src/
-?   ?   ??? config/
-?   ?   ??? data/
-?   ?   ??? evaluation/
-?   ?   ??? features/
-?   ?   ??? momentum/
-?   ?   ??? training/
-?   ?   ??? utils/
-?   ??? scripts/
-?   ??? outputs/
-?
-??? FootBallRealPre/
-    ??? README.md
-    ??? requirements.txt
-    ??? .gitignore
-    ??? FootBallRealPre/
-        ??? FootBallRealTimePrediction/
-            ??? build_momentum_features.py
-            ??? run_momentum_prediction.py
-            ??? tune_england_pre_momentum.py
-            ??? 15-16_official_data/
-            ??? real_time_data/
-            ??? sb_events/
-            ??? src/
+├── README.md
+├── FootBallPredictionOnBig5/
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── .gitignore
+│   ├── data/
+│   ├── merged_data/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── data/
+│   │   ├── evaluation/
+│   │   ├── features/
+│   │   ├── momentum/
+│   │   ├── training/
+│   │   └── utils/
+│   ├── scripts/
+│   └── outputs/
+│
+└── FootBallRealPre/
+    ├── README.md
+    ├── requirements.txt
+    ├── .gitignore
+    └── FootBallRealPre/
+        └── FootBallRealTimePrediction/
+            ├── build_momentum_features.py
+            ├── run_momentum_prediction.py
+            ├── tune_england_pre_momentum.py
+            ├── 15-16_official_data/
+            ├── real_time_data/
+            ├── sb_events/
+            └── src/
 ```
 
 The nested `FootBallRealPre/FootBallRealPre/FootBallRealTimePrediction/` path is the current runnable code directory for the event-level component.
@@ -121,7 +121,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-Python 3.10?3.13 is recommended. Some third-party packages, especially data-access or machine-learning packages, may require a platform-specific compatible version.
+Python 3.10–3.13 is recommended. Some third-party packages, especially data-access or machine-learning packages, may require a platform-specific compatible version.
 
 ## Quick start
 
@@ -137,13 +137,13 @@ python scripts/run.py --task prematch --league England --version selected
 
 The default league files are expected under:
 
-```text
+```
 FootBallPredictionOnBig5/merged_data/feature_engineer5/
-??? England.csv
-??? France.csv
-??? Germany.csv
-??? Italy.csv
-??? Spain.csv
+├── England.csv
+├── France.csv
+├── Germany.csv
+├── Italy.csv
+└── Spain.csv
 ```
 
 Generated models and reports are written to `outputs/` unless another output directory is supplied.
@@ -204,9 +204,9 @@ This runs the focused England pre-match momentum experiment using CatBoost and O
 
 ## Data and licensing
 
-The project contains historical football tables, event-derived files, and generated experiment artifacts. Before publishing or redistributing data, verify the terms of the original data providers, including StatsBomb attribution and redistribution requirements.
+The project contains historical football tables, event-derived files, and generated experiment artifacts. Before publishing or redistributing data, verify the terms of the original data providers, including StatsBomb, official league websites, or odds aggregators.
 
-Do not commit private data, credentials, API keys, or data that you are not authorized to redistribute. Generated outputs, caches, local environments, and logs should remain untracked according to the component `.gitignore` files.
+Do not commit private data, credentials, API keys, or data that you are not authorized to redistribute. Generated outputs, caches, local environments, and logs should remain untracked according to the `.gitignore` files in each component.
 
 ## Reproducibility guidance
 
@@ -241,8 +241,8 @@ Keep command-line interfaces, input paths, feature definitions, and dependency f
 
 ## License and citation
 
-No software license is currently declared for this project. Add a license file before distributing the code or accepting external contributions. Add the required dataset citations and provider-specific attribution before publishing derived or raw data.
+No software license is currently declared for this project. Add a license file before distributing the code or accepting external contributions. Add the required dataset citations and provider-specific attribution when publishing.
 
 ## Contact and issue reports
 
-When opening an issue, include the operating system, Python version, component path, command, input-data version, and full traceback. Never include private datasets, credentials, or restricted event files in an issue.
+When opening an issue, include the operating system, Python version, component path, command, input-data version, and full traceback. Never include private datasets, credentials, or restricted event files in public issue reports.
