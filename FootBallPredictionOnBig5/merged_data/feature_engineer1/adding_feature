@@ -1,0 +1,6 @@
+Original-feature+ little derived feature
+ppg_differential	主队赛前 PPG − 客队赛前 PPG
+xg_power_index	主队赛前 xG − 客队赛前 xG
+
+ht_result	半场赛果，H/D/A	如果模型目标是赛前预测，不能用
+half_time_lead	半场主队领先球数	如果模型目标是赛前预测，不能用

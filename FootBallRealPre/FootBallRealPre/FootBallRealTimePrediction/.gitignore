@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging and tooling
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated experiment outputs and local caches
+momentum_prediction_results/**
+!momentum_prediction_results/.gitkeep
+catboost_info/
+*.log
+
+# Local secrets and configuration
+.env
+.env.*
+!.env.example

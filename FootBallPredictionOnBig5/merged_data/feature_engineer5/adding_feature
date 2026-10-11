@@ -1,0 +1,35 @@
+休息与赛程：
+home_rest_days, away_rest_days
+home/away_match_density_mom_5
+home/away_match_density_ewm_5
+
+旅行与疲劳：
+home_travel_km_team
+away_travel_fatigue_score
+home/away_travel_km_mom_5
+home/away_travel_km_ewm_5
+home/away_travel_fatigue_mom_5
+
+rest_days
+= 当前比赛日期 - 该队上一场比赛日期
+
+match_density_mom_5
+= 该队当前比赛前最近 5 场的 match_density 平均值
+
+match_density_ewm_5
+= 该队当前比赛前 match_density 的 EWM 指数加权均值，span=5
+
+home_travel_km_team
+= 当前比赛主队旅行距离，默认 0
+
+away_travel_fatigue_score
+= log1p(客队当前旅行距离) × (1 + 客队当前赛程密度) / sqrt(客队休息天数 + 1)
+
+travel_km_mom_5
+= 该队当前比赛前最近 5 场旅行距离平均值
+
+travel_km_ewm_5
+= 该队当前比赛前旅行距离 EWM，span=5
+
+travel_fatigue_mom_5
+= 该队当前比赛前最近 5 场 fatigue score 平均值

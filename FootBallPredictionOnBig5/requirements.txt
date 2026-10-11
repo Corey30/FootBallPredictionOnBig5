@@ -1,0 +1,19 @@
+﻿# Core data and scientific stack
+pandas>=1.5
+numpy>=1.23
+scipy>=1.9
+scikit-learn>=1.2
+
+# Models and imbalance handling
+xgboost>=2.0
+lightgbm>=4.0
+imbalanced-learn>=0.11
+
+# Persistence and visualisation
+joblib>=1.2
+matplotlib>=3.7
+pyarrow>=12.0
+
+# Required only when using the Vanilla RNN model
+# TensorFlow support depends on the Python/OS combination.
+tensorflow>=2.15

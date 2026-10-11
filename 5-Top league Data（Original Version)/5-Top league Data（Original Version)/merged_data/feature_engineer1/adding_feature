@@ -1,0 +1,16 @@
+home_recent_cards	主队近期牌数
+away_recent_cards	客队近期牌数
+home_recent_fouls	主队近期犯规数
+away_recent_fouls	客队近期犯规数
+home_match_density	主队近期赛程密度
+away_match_density	客队近期赛程密度
+ppg_differential	主队赛前 PPG − 客队赛前 PPG
+xg_power_index	主队赛前 xG − 客队赛前 xG
+
+ht_result	半场赛果，H/D/A	如果模型目标是赛前预测，不能用
+half_time_lead	半场主队领先球数	如果模型目标是赛前预测，不能用
+
+target_match_result	全场赛果标签，H/D/A
+target_home_team_goal_count	主队全场进球数
+target_away_team_goal_count	客队全场进球数
+target_total_goal_count	全场总进球数

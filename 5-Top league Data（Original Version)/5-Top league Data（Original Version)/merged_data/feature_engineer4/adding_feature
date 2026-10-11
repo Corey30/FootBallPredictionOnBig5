@@ -1,0 +1,64 @@
+Elo 赛前强弱特征
+home_elo_pre
+away_elo_pre
+elo_diff_pre
+#elo_home_win_prob_pre 暂时不加
+
+主客队近期ppg（form）momentum特征（窗口3、5、8）
+home_form_pts_3
+home_form_pts_5
+home_form_pts_8
+away_form_pts_3
+away_form_pts_5
+away_form_pts_8
+form_pts_diff_3
+form_pts_diff_5
+form_pts_diff_8
+
+主客队近期 goal / xG momentum特征（窗口5）
+home_goal_diff_5
+away_goal_diff_5
+goal_diff_mom_5_diff
+home_xg_diff_5_proxy
+away_xg_diff_5_proxy
+xg_diff_mom_5_proxy_diff
+
+
+状态趋势与波动
+home_mom_slope
+away_mom_slope
+mom_slope_diff
+home_mom_volatility_5
+away_mom_volatility_5
+mom_volatility_diff
+（slope = 状态是在上升还是下降
+volatility = 状态是否稳定）
+
+主客队分开来看：作为主队or客队近期的ppg（form）momentum特征（窗口5）
+home_venue_form_pts_5
+away_venue_form_pts_5
+venue_form_pts_5_diff
+
+主客队分开来看：作为主队or客队近期 goal / xG momentum特征（窗口5）
+home_venue_xg_diff_5_proxy
+away_venue_xg_diff_5_proxy
+venue_xg_diff_5_proxy_diff
+
+赔率momentum特征（窗口5）
+home_odds_move_for_ewm_5
+away_odds_move_for_ewm_5
+odds_move_for_ewm_diff_5
+home_implied_prob_shift_for_ewm_5
+away_implied_prob_shift_for_ewm_5
+implied_prob_shift_for_ewm_diff_5
+odds_move_abs_for_mom_diff_5
+
+
+对手强度调整后的近期状态（普通 form 的问题是没有考虑对手强弱）
+home_opp_adj_form_5
+away_opp_adj_form_5
+opp_adj_form_diff_5
+home_opp_adj_form_5_elo
+away_opp_adj_form_5_elo
+opp_adj_form_diff_5_elo
+

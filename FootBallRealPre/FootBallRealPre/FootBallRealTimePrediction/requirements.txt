@@ -1,0 +1,16 @@
+# Data and scientific stack
+pandas>=1.5
+numpy>=1.23
+scipy>=1.9
+scikit-learn>=1.2
+
+# Model and hyperparameter optimisation
+catboost>=1.2
+optuna>=3.5
+
+# Parquet and progress utilities
+pyarrow>=12.0
+tqdm>=4.65
+
+# StatsBomb data access (only needed by the fetch scripts)
+statsbombpy>=1.12

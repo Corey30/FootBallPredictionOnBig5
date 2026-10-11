@@ -1,0 +1,44 @@
+===== FILE CONSISTENCY =====
+{'parquet_rows': 6360215, 'csv_rows': 6360215, 'same_row_count': True, 'same_columns': True, 'first_100_rows_keycols_equal': True}
+
+===== SCHEMA CHECK =====
+{'missing_required_cols': [], 'duplicated_cols': []}
+
+===== LABEL CHECK =====
+{'label_values_found': ['away', 'home', 'none'], 'invalid_label_values': [], 'label_counts': {'home': 2432505, 'none': 2020205, 'away': 1907505}}
+
+===== NONNEGATIVE CHECK =====
+{'time_sec': {'min': 0.0, 'negative_rows': 0}, 'recent_shots_home': {'min': 0.0, 'negative_rows': 0}, 'recent_shots_away': {'min': -3.0, 'negative_rows': 8}, 'recent_xg_home': {'min': 0.0, 'negative_rows': 0}, 'recent_xg_away': {'min': -0.77835228, 'negative_rows': 8}, 'recent_corners_home': {'min': 0.0, 'negative_rows': 0}, 'recent_corners_away': {'min': 0.0, 'negative_rows': 0}, 'recent_box_entries_home_v3': {'min': 0.0, 'negative_rows': 0}, 'recent_box_entries_away_v3': {'min': 0.0, 'negative_rows': 0}, 'recent_high_turnovers_home_v3': {'min': 0.0, 'negative_rows': 0}, 'recent_high_turnovers_away_v3': {'min': 0.0, 'negative_rows': 0}}
+
+===== DIFF CHECK =====
+{'recent_shots_diff': {'ok': True, 'mismatch_rows': 0}, 'recent_xg_diff': {'ok': True, 'mismatch_rows': 0}, 'recent_corners_diff': {'ok': True, 'mismatch_rows': 0}, 'recent_box_entries_diff_v3': {'ok': True, 'mismatch_rows': 0}, 'recent_high_turnovers_diff_v3': {'ok': True, 'mismatch_rows': 0}}
+
+===== MISSING VALUES =====
+{'match_id': 0, 'period': 0, 'time_sec': 0, 'home_team': 0, 'away_team': 0, 'score_diff': 0, 'red_card_diff': 0, 'recent_shots_home': 0, 'recent_shots_away': 0, 'recent_shots_diff': 0, 'recent_xg_home': 0, 'recent_xg_away': 0, 'recent_xg_diff': 0, 'recent_corners_home': 0, 'recent_corners_away': 0, 'recent_corners_diff': 0, 'label_next_goal_class': 0, 'state_row_id': 0, 'recent_box_entries_home_v3': 0, 'recent_box_entries_away_v3': 0, 'recent_box_entries_diff_v3': 0, 'recent_high_turnovers_home_v3': 0, 'recent_high_turnovers_away_v3': 0, 'recent_high_turnovers_diff_v3': 0}
+
+===== MATCH LEVEL CONSISTENCY =====
+{'matches_with_multiple_home_team': 0, 'matches_with_multiple_away_team': 0, 'state_row_id_bad_match_count': 0, 'state_row_id_bad_match_examples': [], 'time_sec_nonmonotonic_match_count': 1523, 'time_sec_nonmonotonic_match_examples': [265839, 265894, 265944, 266056, 266106, 266149, 266166, 266236, 266424, 266490]}
+
+===== DESCRIBE =====
+                                   count         mean          std        min     25%     50%     75%          max
+time_sec                       6360215.0  2715.602384  1615.808093   0.000000  1310.0  2716.0  4088.0  6128.000000
+score_diff                     6360215.0     0.159602     1.164921  -8.000000     0.0     0.0     1.0     8.000000
+red_card_diff                  6360215.0    -0.011197     0.249217  -2.000000     0.0     0.0     0.0     2.000000
+recent_shots_home              6360215.0     0.110555     0.345802   0.000000     0.0     0.0     0.0     5.000000
+recent_shots_away              6360215.0     0.091740     0.314661  -3.000000     0.0     0.0     0.0     6.000000
+recent_shots_diff              6360215.0     0.018815     0.482333  -6.000000     0.0     0.0     0.0     5.000000
+recent_xg_home                 6360215.0     0.009010     0.048172   0.000000     0.0     0.0     0.0     1.809603
+recent_xg_away                 6360215.0     0.007354     0.043372  -0.778352     0.0     0.0     0.0     1.506481
+recent_xg_diff                 6360215.0     0.001656     0.065526  -1.506481     0.0     0.0     0.0     1.809603
+recent_corners_home            6360215.0     0.115838     0.357728   0.000000     0.0     0.0     0.0     5.000000
+recent_corners_away            6360215.0     0.090565     0.315393   0.000000     0.0     0.0     0.0     4.000000
+recent_corners_diff            6360215.0     0.025274     0.492131  -4.000000     0.0     0.0     0.0     5.000000
+recent_box_entries_home_v3     6360215.0     0.527387     0.750565   0.000000     0.0     0.0     1.0     7.000000
+recent_box_entries_away_v3     6360215.0     0.460662     0.704733   0.000000     0.0     0.0     1.0     7.000000
+recent_box_entries_diff_v3     6360215.0     0.066726     1.121944  -7.000000    -1.0     0.0     1.0     7.000000
+recent_high_turnovers_home_v3  6360215.0     0.496359     0.829161   0.000000     0.0     0.0     1.0    10.000000
+recent_high_turnovers_away_v3  6360215.0     0.449959     0.786741   0.000000     0.0     0.0     1.0    10.000000
+recent_high_turnovers_diff_v3  6360215.0     0.046400     1.207844 -10.000000     0.0     0.0     1.0    10.000000
+
+===== SAMPLED MATCH IDS =====
+[3890300, 3879788, 3890527, 3754351, 3879839]

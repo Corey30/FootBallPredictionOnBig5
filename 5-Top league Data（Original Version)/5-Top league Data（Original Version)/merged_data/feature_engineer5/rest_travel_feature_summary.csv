@@ -1,0 +1,6 @@
+﻿league,rows,columns,output_file
+England,3800,203,E:\soccerf\5-Top league Data（Original Version)\5-Top league Data（Original Version)\merged_data\feature_engineer5\England_feature_engineered_with_odds_venue_history_FINAL_selected_advanced_FINAL_rest_travel_FINAL.csv
+France,3551,203,E:\soccerf\5-Top league Data（Original Version)\5-Top league Data（Original Version)\merged_data\feature_engineer5\France_feature_engineered_with_odds_venue_history_FINAL_selected_advanced_FINAL_rest_travel_FINAL.csv
+Germany,3060,203,E:\soccerf\5-Top league Data（Original Version)\5-Top league Data（Original Version)\merged_data\feature_engineer5\Germany_feature_engineered_with_odds_venue_history_FINAL_selected_advanced_FINAL_rest_travel_FINAL.csv
+Italy,3801,203,E:\soccerf\5-Top league Data（Original Version)\5-Top league Data（Original Version)\merged_data\feature_engineer5\Italy_feature_engineered_with_odds_venue_history_FINAL_selected_advanced_FINAL_rest_travel_FINAL.csv
+Spain,3800,203,E:\soccerf\5-Top league Data（Original Version)\5-Top league Data（Original Version)\merged_data\feature_engineer5\Spain_feature_engineered_with_odds_venue_history_FINAL_selected_advanced_FINAL_rest_travel_FINAL.csv

@@ -1,0 +1,6 @@
+﻿league,rows,columns,output_file
+England,3800,163,d:\program\SoccerPre\merged_data\feature_engineer3\England_feature_engineered_with_odds.csv
+France,3551,163,d:\program\SoccerPre\merged_data\feature_engineer3\France_feature_engineered_with_odds.csv
+Germany,3060,163,d:\program\SoccerPre\merged_data\feature_engineer3\Germany_feature_engineered_with_odds.csv
+Italy,3801,163,d:\program\SoccerPre\merged_data\feature_engineer3\Italy_feature_engineered_with_odds.csv
+Spain,3800,163,d:\program\SoccerPre\merged_data\feature_engineer3\Spain_feature_engineered_with_odds.csv

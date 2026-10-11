@@ -1,0 +1,32 @@
+
+历史主/客场胜平负率
+Total home win rate
+Total home draw rate
+Total home loss rate
+Total away win rate
+Total away draw rate
+Total away loss rate
+
+历史累计进球 / 失球 / 净胜球
+Home goals forward
+Home goals against
+Home goal differential
+Away goals forward
+Away goals against
+Away goal differential
+
+历史场均进球 / 失球 / 净胜球
+Home goals forward per match
+Home goals against per match
+Home goal differential per match
+Away goals forward per match
+Away goals against per match
+Away goal differential per match
+
+历史赢球 / 输球平均幅度
+Home wins margin goal
+Home losses margin goal
+Away wins margin goal
+Away losses margin goal
+
+#注意是有跨赛季累积的风险，所以要根据实际情况判断是否需要重置
